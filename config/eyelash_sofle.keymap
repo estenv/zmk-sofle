@@ -26,23 +26,6 @@
         };
     };
 
-    macros {
-        SHIFT_MCLK: SHIFT_MCLK {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_press>,
-                <&mkp MB3>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT &mkp MB3>;
-
-            label = "SHIFT_MCLK";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -68,7 +51,6 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&none>;
         };
 
         layer_2 {
@@ -81,7 +63,6 @@
             >;
 
             display-name = "layer2";
-            sensor-bindings = <&none>;
         };
     };
 };
